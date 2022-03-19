@@ -1,0 +1,49 @@
+-> ler uma imagem
+imread('img.png')
+
+-> mostrar uma imagem
+imshow('img.png')
+
+x(1:3,1:3,1)
+
+-> deixar a imagem na escala de cinza
+x_gray = rgb2gray(x)
+
+-> escurecer a imagem
+imshow(x_gray%3)
+
+-> clarear a imagem
+imshow(x_gray.^2)
+
+-> configuração das cores da imagem
+imshow(x_gray); figure(2); imshow(x.^3)
+imshow(x_gray); figure(2); imshow(x.^3)
+imshow(x_gray); figure(2); imshow(x_gray.^(1/3))
+
+-> tirar da imagem na escala de vermelho
+y(:,:,1) = 0;
+y(1:386,1:642,1) = 0;
+y(1:end,1:end,1) = 0;
+
+-> tirar da imagem na escala de azul
+y(:,:,3) = 0;
+y(1:386,1:642,3) = 0;
+y(1:end,1:end,3) = 0;
+
+-> tirar da imagem na escala de verde
+y(:,:,2) = 0;
+y(1:386,1:642,2) = 0;
+y(1:end,1:end,2) = 0;
+
+-> deixar a imagem na escala de vermelho
+y(:,:,2:3) = 0;
+
+-> deixar a imagem na escala de azul
+y(:,:,1:2) = 0;
+
+-> representação do HSI
+x_hsv = rgb2hsv(x);
+
+-> tonalidade da imagem
+y_hsv(:,:,2) = 0.95;
+
