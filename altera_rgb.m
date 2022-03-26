@@ -9,4 +9,5 @@ for nivel_vermelho = 0:40:255
     imshow(y)
     pause;
     close all
+ end
 end
