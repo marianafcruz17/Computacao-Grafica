@@ -1,0 +1,26 @@
+-> imagem subexposta
+x = imread('img1.png');
+imshow(x)
+
+- deixar a imagem cinza
+x_cinza = rgb2gray(x);
+imshow(x_cinza)
+
+- aumenta o contraste
+x_cinza = double(x_cinza)/255;
+imshow(x_cinza)
+x = double(rgb2gray(x))/255;
+imshow(x)
+
+- correção gamma
+gamma = 0.2
+imshow(x.^gamma)
+
+-> imagem superexposta
+x = imread('img2.png');
+imshow(x)
+x = double(rgb2gray(x))/255;
+imshow(x) 
+
+-> média dos pixels
+mean(x(:))
