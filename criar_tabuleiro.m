@@ -1,1 +1,0 @@
-%script para criar uma imagem de tabuleiro de xadrez%
