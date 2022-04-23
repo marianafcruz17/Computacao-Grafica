@@ -1,0 +1,7 @@
+-> Dilatação triangular
+g = [1 1 2 1 2 1 1 2 3 4 4 4]
+w = [0.5 1 0.5]
+g1 = zeros(1,24);
+g1(1:2:end) = g(:);
+gE = conv(g1,w);
+stem(gE)

@@ -1,0 +1,13 @@
+-> Dilatação
+g = [1 1 2 1 2 1 1 2 3 4 4 4]
+stem(g)
+w = [1 1]
+
+-> inserir zeros
+g1 = zeros(1,24);
+g1(1:2:end) = g(:);
+stem(g1)
+
+-> convolução
+gE = conv(g1,w);
+stem(gE)
